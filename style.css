@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lift {
+  height: 200px;
+  width: 150px;
+  position: absolute;
+  border-top: 5px solid rgb(0, 0, 27);
+  border-bottom: 5px solid rgb(0, 0, 27);
+  display: flex;
+  gap: 4px;
+  overflow: hidden;
+}
+.door {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(44, 44, 114);
+  display: inline-block;
+  border-top: 25px solid rgb(121, 21, 252);
+  /* 
+  transition: <property> <duration> <timing-function> <delay>;
+ */
+}
+.left-door {
+  overflow: hidden;
+  border-left: 15px solid rgb(121, 21, 252);
+  transition:transform 3s  ;
+  box-shadow: 2.5px 0 0 rgb(0, 0, 27) ;
+}
+.right-door {
+  overflow: hidden;
+  border-right: 15px solid rgb(121, 21, 252);
+  transition: transform 3s ease;
+ box-shadow: -2.5px 0 0 rgb(0, 0, 27) ;
+}
+
+.left-door-open {
+  box-shadow: 7px 0px 8px rgba(0, 0, 0, 0.438);
+  transform: translateX(-60px);
+}
+
+.right-door-open {
+  box-shadow: -7px 0px 8px rgba(0, 0, 0, 0.438);
+  transform: translateX(60px);
+}
+
+.lift-open {
+  background-color: rgb(255, 255, 195);
+  background: linear-gradient(rgb(255, 136, 0) ,rgba(255, 200, 137, 0.856) );
+  box-shadow: 5px 10px 15px rgba(251, 255, 0, 0.726) inset,-5px -10px 5px rgba(255, 255, 0, 0.555) inset;
+}
+
+.diagonal {
+  position: relative;
+  left: -100px;
+  width: 600px;
+  height: 100px;
+  /* border: 2px solid rgb(255, 255, 255); */
+  transform: rotate(-30deg);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  top: -75px;
+}
+.diagonal-right {
+  top: -38px;
+}
+.d1 {
+  background-color: rgb(197, 202, 250);
+  width: 100%;
+  height: 20px;
+  /* transform: rotate(-30deg); */
+}
+.d2 {
+  background-color: rgb(197, 202, 250);
+  width: 100%;
+  height: 40px;
+  /* transform: rotate(-30deg); */
+}
+/* **************************************** */
+.floors {
+  height: 645px;
+  width: 80%;
+  background-color: rgb(235, 202, 208);
+  position: relative;
+}
+.floor {
+  height: 210px;
+  width: 100%;
+  border-bottom: 5px solid rgb(47, 0, 75);
+  position: relative;
+}
+
+.lift {
+  left: 150px;
+  bottom: 0px;
+  transition: bottom 2.2s ease-in-out;
+}
+.para {
+  position: absolute;
+}
+/* ************************************ */
+.button {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+
+  display: flex;
+  gap: 10px;
+  padding: 2px;
+}
+.btn {
+  background-color: rgb(211, 106, 211);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.num{
+  height: 10px;
+  width: 10px;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  background-color: rgb(211, 106, 211) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+}
+.btn:hover {
+  background-color: rgb(255, 151, 192);
+}
+.controller{
+  background-color:rgb(255, 163, 255) ;
+  width: 60px;
+  height: 100px;
+  position: absolute;
+  top: 20%;
+  left: 40px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
